@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Health Track</title>
+<%@ include file="header.jsp" %>
+</head>
+<body>
+<%@ include file="menu.jsp" %>
+
+	    <span class="navbar-text text-danger" style="margin-right:10px" >
+	        ${erro }
+	  	</span>	
+	    <form class="form-inline my-2 my-lg-0" action="login" method="post">
+	    	  <input class="form-control mr-sm-2" type="text" name="email" placeholder="E-mail">
+	      <input class="form-control mr-sm-2" type="password" name="senha" placeholder="Senha">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Entrar</button>
+	    </form>
+
+
+
+<%@ include file="footer.jsp" %>
+</body>
+</html>

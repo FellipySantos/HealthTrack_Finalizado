@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &apos; from &apos;br.com.fiap.devpremium.controller.PressaoServlet.doPost(...)&apos; to &apos;br.com.fiap.devpremium.controller.PressaoServlet&apos;&#x0D;&#x0A;- Original project: &apos;JSPs&apos;&#x0D;&#x0A;- Method name: &apos;cadastrar&apos;&#x0D;&#x0A;- Destination type: &apos;br.com.fiap.devpremium.controller.PressaoServlet&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;cadastrar&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src\/main\/java&lt;br.com.fiap.devpremium.controller{PressaoServlet.java" name="cadastrar" replace="false" selection="959 582" stamp="1636260681188" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Health Track</title>
+<%@ include file="header.jsp" %>
+</head>
+<body>
+<%@ include file="menu.jsp" %>
+      <div class="jumbotron">
+        <h1 class="display-4"><b>Heath Track</b></h1>
+        <br>
+        <div class="alert alert-success" role="alert">
+          <b>Viva o hoje da melhor forma possível!</b>
+        </div>
+        <p class="lead">O melhor do exercício físico, alimentação e controle da sua saúde em única plataforma!</p>
+        <hr class="my-4">
+        <p><b>Projeto criado em meados de 2021 com a intenção de ajudar as pessoas a terem uma vida saúde. Nele você poderá:.</b></p>
+        <br>
+        <p>■ Criar sua conta e acompanhar seu dados pessoais e progressos;</p>
+        <p>■ Cadastrar e acompanhar tudo que você come diariamente;</p>
+        <p>■ Ter um maior controle do seu batimento cardiaco diário;</p>
+        <p>■ Quantificar os exercícios realizados e a caloria perdida em cada um;</p>
+        <p>■ Visualizar a evolução do seu peso e altura</p>
+
+        <br>
+
+        <div class="alert alert-danger" role="alert">
+          Saia já da estagnação! Está cansado de subir a escada e cansar rápido ou tentar emagrecer sozinho e sem resultado?
+        </div>
+
+        <p>Conte conosco para te ajudar a realizar seus objetivos!</p>
+
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">Muito bem!</h4>
+          <p>Agora que você já sabe quem somos e o que podemos fazer pra te ajudar, que tal fazer sua conta e aproveitar todos os benefícios dessa ótima ferramenta?</p>
+          <hr>
+          <p class="mb-0">Se liga! O cadastro é rapidinho</p>
+        </div>
+
+        <br>
+
+        <a class="btn btn-success" href="cadastro.html" role="button">Faça já seu cadastro</a>
+        <a class="btn btn-warning" href="login.html" role="button">Já tem conta? Faça seu login</a>
+        <br>
+        <br>
+      </div>
+
+
+<%@ include file="footer.jsp" %>
+</body>
+</html>

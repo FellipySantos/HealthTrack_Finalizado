@@ -1,0 +1,50 @@
+package br.com.fiap.devpremium.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import br.com.fiap.devpremium.bean.Usuario;
+import br.com.fiap.devpremium.bo.EmailBO;
+import br.com.fiap.devpremium.dao.AtletaDAO;
+import br.com.fiap.devpremium.dao.UsuarioDAO;
+import br.com.fiap.devpremium.exception.EmailException;
+
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	private UsuarioDAO dao;
+  
+	public LoginServlet() {
+		dao = UsuarioDAO.getUsuarioDAO();
+    }
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String email = request.getParameter("email");
+		String senha = request.getParameter("senha");
+		
+		Usuario usuario = new Usuario(email,senha);
+		
+		if (dao.validarUsuario(usuario)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("usuario", email);
+			String mensagem = "Um login foi realizado";
+			try {
+				EmailBO bo;
+				bo.enviarEmail(email, "Login Realizado", mensagem);
+			} catch (EmailException e) {
+				e.printStackTrace();
+			}
+		}else {
+			request.setAttribute("erro", "Usuário e/ou senha inválidos");
+		}
+		request.getRequestDispatcher("index.jsp").forward(request, response);
+	}
+
+}

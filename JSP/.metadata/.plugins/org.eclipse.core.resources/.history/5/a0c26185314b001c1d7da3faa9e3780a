@@ -1,0 +1,109 @@
+package br.com.fiap.devpremium.bean;
+
+import java.util.Calendar;
+
+	/**
+	*
+	* A classe Usuário salva os registros de cadastro do Usuário. Ela é uma classe abstrata que serve de herança para a classe Prestador e Atleta.
+	*
+	*
+	* @author DevPremium
+	*
+	* @version 1.0
+	*
+	*/
+
+	public class Usuario {
+	
+		protected int userID;
+		protected String nome;
+		protected Calendar dtNasc;
+		protected String sexo;
+		protected String email;
+		protected String tipoUser;
+		protected String senha;
+
+    public Usuario() {}
+    
+	/**
+	 *
+	 * Construtor da classe Usuário
+	 *
+	 * @param userID codigo do Usuário
+	 * @param dtNasc é a data de nascimento do usuário
+	 * @param sexo do registro
+	 * @param tipoUser é o tipo de conta do usuário
+	 *
+	 */
+    
+    public Usuario(int userID, String nome, Calendar dtNasc, String sexo,  String email, String tipoUser,String senha) {
+    	
+    	this.userID = userID;
+    	this.nome = nome;
+    	this.dtNasc = dtNasc;
+    	this.sexo = sexo;
+    	this.email = email;
+    	this.tipoUser = tipoUser;
+    	this.senha = senha;    	
+    }
+
+	public int getUserID() {
+		return userID;
+	}
+
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Calendar getDtNasc() {
+		return dtNasc;
+	}
+
+	public void setDtNasc(Calendar dtNasc) {
+		this.dtNasc = dtNasc;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getTipoUser() {
+		return tipoUser;
+	}
+
+	public void setTipoUser(String tipoUser) {
+		this.tipoUser = tipoUser;
+	}
+	
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+    
+    
+    
+
+}

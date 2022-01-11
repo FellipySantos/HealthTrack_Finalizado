@@ -1,0 +1,46 @@
+package br.com.fiap.devpremium.bean;
+
+import java.util.Calendar;
+
+	/**
+	*
+	* A classe Treinador salva os registros de cadastro do Treinador. Ela é uma classe entidade que busca herança com a classe Prestador (que busca herança com a classe Usuário).
+	*
+	*
+	* @author DevPremium
+	*
+	* @version 1.0
+	*
+	*/
+
+public class Treinador extends Prestador {
+
+	public Treinador() {};
+	
+	/**
+	 *
+	 * Construtor da classe Treinador
+	 *
+	 * @param userID codigo do Usuário
+	 * @param dtNasc é a data de nascimento do usuário
+	 * @param sexo do registro
+	 * @param tipoUser é o tipo de conta do usuário
+	 * @param cnpj da empresa do Treinador
+	 * @param cref é o registro no Conselho Regional de Educação Física do treinador
+	 *
+	 */
+	
+	public String cref;
+		
+	public Treinador(int userID, String nome, Calendar dtNasc, String sexo, String email, String tipoUser, String cnpj, String cref) {
+		
+		super(userID, nome, dtNasc, sexo, email, tipoUser, cnpj);
+		
+		this.cref = cref;
+
+	}
+	
+
+
+
+}

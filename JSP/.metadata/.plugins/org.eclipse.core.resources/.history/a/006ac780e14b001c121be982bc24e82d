@@ -1,0 +1,120 @@
+package br.com.fiap.devpremium.bean;
+
+import java.util.Calendar;
+
+	/**
+	*
+	* A classe Nutri salva os registros de cadastro do Nutricionista. Ela é uma classe entidade que busca herança com a classe Prestador (que busca herança com a classe Usuário).
+	*
+	*
+	* @author DevPremium
+	*
+	* @version 1.0
+	*
+	*/
+
+public class Nutri extends Prestador {
+
+	public Nutri() {};
+	
+	/**
+	 *
+	 * Construtor da classe Nutri
+	 *
+	 * @param userID codigo do Usuário
+	 * @param dtNasc é a data de nascimento do usuário
+	 * @param sexo do registro
+	 * @param tipoUser é o tipo de conta do usuário
+	 * @param cnpj da empresa do Nutricionista
+	 * @param crn é o registro no Conselhos Regional de Nutricionistas
+	 *
+	 */
+		
+	public String crn;
+		
+	public Nutri(int userID, String nome, Calendar dtNasc, String sexo, String email, String tipoUser, String cnpj, String crn) {
+		
+		super(userID, nome, dtNasc, sexo, email, tipoUser, cnpj);
+		
+		this.crn = crn;
+
+	}
+
+	public int getUserID() {
+		return userID;
+	}
+
+
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public Calendar getdtNasc() {
+		return dtNasc;
+	}
+
+
+	public void setdtNasc(Calendar dtNasc) {
+		this.dtNasc = dtNasc;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public String getSexo() {
+		return sexo;
+	}
+
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	
+	public String getTipoUser() {
+		return tipoUser;
+	}
+
+
+	public void setTipoUser(String tipoUser) {
+		this.tipoUser = tipoUser;
+	}
+	
+	public String getCnpj() {
+		return cnpj;
+	}
+
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	
+	public String getCrn() {
+		return crn;
+	}
+
+
+	public void setCrn(String crn) {
+		this.crn = crn;
+	}
+	
+	
+
+
+	
+
+}
